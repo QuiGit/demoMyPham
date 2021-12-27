@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{156D739C-C89A-46BB-9B83-2EDE73C8F3F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CuaHangMP</RootNamespace>
+    <AssemblyName>CuaHangMP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddKhachHangFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddKhachHangFrm.Designer.cs">
+      <DependentUpon>AddKhachHangFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCHoaDonFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCHoaDonFrm.Designer.cs">
+      <DependentUpon>BCHoaDonFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCKhachHangFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCKhachHangFrm.Designer.cs">
+      <DependentUpon>BCKhachHangFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BCSanPhamFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BCSanPhamFrm.Designer.cs">
+      <DependentUpon>BCSanPhamFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHMPDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHMPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CHMPDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHMPDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CHMPDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHMPDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DoiPassFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiPassFrm.Designer.cs">
+      <DependentUpon>DoiPassFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DsHoaDonFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DsHoaDonFrm.Designer.cs">
+      <DependentUpon>DsHoaDonFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportExcel.cs" />
+    <Compile Include="HoaDonFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDonFrm.Designer.cs">
+      <DependentUpon>HoaDonFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhacHangFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhacHangFrm.Designer.cs">
+      <DependentUpon>KhacHangFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SanPhamFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SanPhamFrm.Designer.cs">
+      <DependentUpon>SanPhamFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThuongHieuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuongHieuFrm.Designer.cs">
+      <DependentUpon>ThuongHieuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong.Designer.cs">
+      <DependentUpon>HeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddKhachHangFrm.resx">
+      <DependentUpon>AddKhachHangFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCHoaDonFrm.resx">
+      <DependentUpon>BCHoaDonFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCKhachHangFrm.resx">
+      <DependentUpon>BCKhachHangFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BCSanPhamFrm.resx">
+      <DependentUpon>BCSanPhamFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiPassFrm.resx">
+      <DependentUpon>DoiPassFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DsHoaDonFrm.resx">
+      <DependentUpon>DsHoaDonFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDonFrm.resx">
+      <DependentUpon>HoaDonFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhacHangFrm.resx">
+      <DependentUpon>KhacHangFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportHoadon.rdlc" />
+    <EmbeddedResource Include="ReportKhachHang.rdlc" />
+    <EmbeddedResource Include="ReportSanPham.rdlc" />
+    <EmbeddedResource Include="SanPhamFrm.resx">
+      <DependentUpon>SanPhamFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuongHieuFrm.resx">
+      <DependentUpon>ThuongHieuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong.resx">
+      <DependentUpon>HeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="CHMPDataSet.xsc">
+      <DependentUpon>CHMPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CHMPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CHMPDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CHMPDataSet.xss">
+      <DependentUpon>CHMPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CHMPDataSet1.xsc">
+      <DependentUpon>CHMPDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CHMPDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CHMPDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CHMPDataSet1.xss">
+      <DependentUpon>CHMPDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CHMPDataSet2.xsc">
+      <DependentUpon>CHMPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CHMPDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CHMPDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CHMPDataSet2.xss">
+      <DependentUpon>CHMPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{c5c7f541-a18c-4a8c-a5c6-ee5009835a6f}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{c7dbbeb2-af29-411f-8f46-0d244619b2df}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroud.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkered-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroud1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-my-pham.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.jfif" />
+    <None Include="Resources\pngtree-pink-lockjpg.jpg" />
+    <None Include="Resources\images.jfif" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
